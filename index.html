@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript - Lesson 2</title>
+
+    <!-- attach own css -->
+    <link rel="stylesheet" href="./main.css">
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li class="link"><a id="active" href="#">Home</a></li>
+        <li class="link"><a href="#">About</a></li>
+        <li class="link"><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <form>
+      <label for="sport">Enter favorite sport:</label>
+      <input type="text" id="sport" name="sport">
+    </form>
+
+    <button id="img-btn" name="button">Hide Image</button>
+
+    <img src="http://placehold.it/250x250" id="paris" alt="Image">
+
+    <p>Two warriors, constituents of arithmetics, enter battle. Only one shall emerge.</p>
+    <form action="">
+      <input type="number" id="number1">
+      <input type="number" id="number2">
+      <button type="button" id="add" name="button">Add</button>
+      <button type="button" id="subtract" name="button">Subtract</button>
+      <button type="button" id="multiply" name="button">Multiply</button>
+      <button type="button" id="divide" name="button">Divide</button>
+    </form>
+    <p id="quickMaths"></p>
+
+    <p id="test">This is some text. Use JavaScript to manipulate...</p>
+
+    <div class="price"></div>
+    <div class="price"></div>
+    <div class="price"></div>
+    <div class="price"></div>
+    <div class="price"></div>
+
+    <!-- attach JQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <!-- attach own js -->
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
