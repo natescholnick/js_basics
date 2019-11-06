@@ -426,22 +426,26 @@ let divide = document.getElementById('divide');
 divide.addEventListener('click', dividef);
 
 function addf() {
-  operator = 'PLUS'
+  operator = 'PLUS';
+  $('#quickMaths').html(parseInt(firstNumber) + parseInt(secondNumber));
 }
 
 function subtractf() {
-  operator = 'SUBTRACT'
+  operator = 'SUBTRACT';
+  $('#quickMaths').html(firstNumber - secondNumber);
 }
 
 function multiplyf() {
   operator = 'MULTIPLY'
+  $('#quickMaths').html(firstNumber * secondNumber);
 }
 
 function dividef() {
-  operator = 'DIVIDE'
+  operator = 'DIVIDE';
+  $('#quickMaths').html(firstNumber / secondNumber);
 }
 
-$('#number1, #number2').keyup(function(e){
+const evaluate = function(e){
   firstNumber = $('#number1').val();
   secondNumber = $('#number2').val();
 
@@ -462,6 +466,9 @@ $('#number1, #number2').keyup(function(e){
       $('#quickMaths').html();
       break;
   }
-})
+}
+
+$('#number1, #number2').keyup(() => evaluate())
+$('#number1, #number2').change(() => evaluate())
 
 // ======================================== //
